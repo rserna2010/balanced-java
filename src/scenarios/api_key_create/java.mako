@@ -2,7 +2,7 @@
 ApiKey(Map<String, Object> payload)
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
 ApiKey key = new ApiKey();
 try {

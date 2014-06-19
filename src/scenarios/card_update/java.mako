@@ -2,9 +2,9 @@
 Card().save()
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Card card = new Card("/cards/CC4mYF7dj7X6OA2K5F0Qyb4N");
+Card card = new Card("/cards/CC832pqCbRPor1ewRdxPvnv");
 
 Map<String, String> meta = new HashMap<String, String>();
 meta.put("facebook.user_id", "0192837465");

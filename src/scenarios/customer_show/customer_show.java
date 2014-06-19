@@ -8,9 +8,9 @@ import java.util.Map;
 public class customer_show {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Customer customer = new Customer("/customers/CU4GAx8tZTDNIgAmwfV35e53");
+Customer customer = new Customer("/customers/CUrtoxuYO4XmXZi6NzXKBLL");
 
 }
 }

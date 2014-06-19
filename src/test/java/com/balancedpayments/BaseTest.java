@@ -1,13 +1,13 @@
 package com.balancedpayments;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.junit.Before;
-
 import com.balancedpayments.errors.HTTPError;
 import com.balancedpayments.errors.MultipleResultsFound;
 import com.balancedpayments.errors.NoResultsFound;
+import org.junit.Before;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 
 public class BaseTest {

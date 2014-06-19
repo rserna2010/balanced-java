@@ -8,9 +8,9 @@ import java.util.Map;
 public class callback_show {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Callback callback = new Callback("/callbacks/CB44XaMOcxsUnuQoA5A4VKCx");
+Callback callback = new Callback("/callbacks/CB7DP9sW9wRe19dFRutynahb");
 
 }
 }

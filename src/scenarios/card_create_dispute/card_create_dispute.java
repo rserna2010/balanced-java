@@ -8,7 +8,7 @@ import java.util.Map;
 public class card_create_dispute {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
 Map<String, Object> payload = new HashMap<String, Object>();
 payload.put("number", "6500000000000002");

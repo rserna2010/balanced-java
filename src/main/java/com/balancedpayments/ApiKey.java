@@ -1,8 +1,5 @@
 package com.balancedpayments;
 
-import java.util.Date;
-import java.util.Map;
-
 import com.balancedpayments.core.Resource;
 import com.balancedpayments.core.ResourceCollection;
 import com.balancedpayments.core.ResourceField;

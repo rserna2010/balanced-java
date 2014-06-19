@@ -8,10 +8,10 @@ import java.util.Map;
 public class card_associate_to_customer {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
 Customer customer = new Customer("");
-Card card = new Card("/cards/CC4tvKLTKXcBJAgkGvPEW58N");
+Card card = new Card("/cards/CCf1fF6z2RjwvniinUVefhb");
 
 try {
     card.associateToCustomer(customer);

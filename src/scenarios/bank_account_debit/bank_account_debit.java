@@ -8,9 +8,9 @@ import java.util.Map;
 public class bank_account_debit {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-BankAccount bankAccount = new BankAccount("/bank_accounts/BA3IhKG3bIN22cLHbaOIGtHb");
+BankAccount bankAccount = new BankAccount("/bank_accounts/BA7lb2roygfhwDfbvikDLcHP");
 
 HashMap<String, Object> payload = new HashMap<String, Object>();
 payload.put("amount", 5000);

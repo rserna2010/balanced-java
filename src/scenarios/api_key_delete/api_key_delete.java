@@ -8,9 +8,9 @@ import java.util.Map;
 public class api_key_delete {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-ApiKey key = new ApiKey("/api_keys/AK3DgZwSCD2ggxGSw1bsiyDX");
+ApiKey key = new ApiKey("/api_keys/AK7gg5FNb0Owb6hErcMm0CZ7");
 try {
     key.unstore();
 }

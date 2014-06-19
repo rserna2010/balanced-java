@@ -1,14 +1,14 @@
 package com.balancedpayments.core;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
-import org.apache.commons.lang3.StringUtils;
-
 import com.balancedpayments.errors.HTTPError;
 import com.balancedpayments.errors.MultipleResultsFound;
 import com.balancedpayments.errors.NoResultsFound;
+//import org.apache.commons.codec.binary.StringUtils;
+import org.apache.commons.lang.StringUtils;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class ResourceQuery<T> extends ResourcePagination<T> {
 
@@ -61,7 +61,7 @@ public class ResourceQuery<T> extends ResourcePagination<T> {
 
     public ResourceQuery<T> filter(String field, String op, String[] values) {
         String name = String.format("%s[%s]", field, op);
-        String value = StringUtils.join(",", values);
+        String value = StringUtils.join(values, ",");
         uri_builder.addParameter(name, value);
         return this;
     }
@@ -72,7 +72,7 @@ public class ResourceQuery<T> extends ResourcePagination<T> {
     }
 
     public ResourceQuery<T> filter(String field, String[] values) {
-        String value = StringUtils.join(",", values);
+        String value = StringUtils.join(values, ",");
         uri_builder.addParameter(field, value);
         return this;
     }

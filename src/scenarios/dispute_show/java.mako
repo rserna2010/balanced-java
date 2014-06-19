@@ -2,9 +2,9 @@
 Dispute(String uri)
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Dispute dispute = new Dispute("/disputes/DT61IA2iRqyYBLqUCJNt5XNV");
+Dispute dispute = new Dispute("/disputes/DT180PABUUjnj5wdE2pcwXQD");
 
 % endif
 

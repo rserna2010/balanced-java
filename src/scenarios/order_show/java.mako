@@ -2,9 +2,9 @@
 Order(String uri)
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Order order = new Order("/orders/OR6d55qbtKx5aWSURkQeodRr");
+Order order = new Order("/orders/OR1oqq5PzdHGkB0GBJJiagNT");
 
 % endif
 

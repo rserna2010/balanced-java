@@ -2,7 +2,7 @@
 Order.Collection(String uri)
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
 Order.Collection orders = new Order.Collection(Order.resource_href);
 

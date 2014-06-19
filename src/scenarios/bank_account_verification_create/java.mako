@@ -2,9 +2,9 @@
 BankAccount().verify()
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-BankAccount bankAccount = new BankAccount("/bank_accounts/BA3IhKG3bIN22cLHbaOIGtHb");
+BankAccount bankAccount = new BankAccount("/bank_accounts/BA7lb2roygfhwDfbvikDLcHP");
 try {
     bankAccount.verify();
 }

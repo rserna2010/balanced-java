@@ -8,7 +8,7 @@ import java.util.Map;
 public class customer_list {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
 Customer.Collection customers = new Customer.Collection(Customer.resource_href);
 

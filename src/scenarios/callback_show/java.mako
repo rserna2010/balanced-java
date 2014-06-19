@@ -2,9 +2,9 @@
 Callback(String uri)
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Callback callback = new Callback("/callbacks/CB44XaMOcxsUnuQoA5A4VKCx");
+Callback callback = new Callback("/callbacks/CB7DP9sW9wRe19dFRutynahb");
 
 % endif
 

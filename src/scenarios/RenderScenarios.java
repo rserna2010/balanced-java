@@ -1,4 +1,3 @@
-
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.asfun.jangod.template.TemplateEngine;
@@ -22,9 +21,7 @@ public class RenderScenarios {
     public static Map<String, Object> loadScenarioCache() throws IOException, JsonMappingException {
         String projectRoot = System.getProperty("user.dir");
         String cacheJson = readFile(projectRoot.concat("/src/scenarios/scenario.cache"));
-        HashMap result =
-                new ObjectMapper().readValue(cacheJson, HashMap.class);
-        return result;
+        return new ObjectMapper().readValue(cacheJson, HashMap.class);
     }
 
     public static String render(String templateFile, Map<String,Object> data)
@@ -122,13 +119,13 @@ public class RenderScenarios {
         }
     }
     public static void main(String[] args) throws IOException, JsonMappingException {
-        try {
-            fetchScenarioCache();
-        }
-        catch (Exception e) {
-            System.out.println(e.getStackTrace());
-            System.exit(1);
-        }
+//        try {
+//            fetchScenarioCache();
+//        }
+//        catch (Exception e) {
+//            System.out.println(e.getStackTrace());
+//            System.exit(1);
+//        }
 
         for (String scenarioPath : getScenarioPaths()) {
             String scenario = new File(scenarioPath).getName();

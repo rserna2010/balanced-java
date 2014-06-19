@@ -2,9 +2,9 @@
 Debit(String uri)
 
 % else:
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-Debit debit = new Debit("/debits/WD4vEUJj36IpPHTnLKMYzHgh");
+Debit debit = new Debit("/debits/WDh5j4t3Rkh7oeONR9Izy61");
 
 % endif
 

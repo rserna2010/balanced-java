@@ -1,19 +1,13 @@
 package com.balancedpayments.core;
 
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
-
 import com.balancedpayments.Balanced;
+import com.balancedpayments.errors.HTTPError;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.client.utils.URLEncodedUtils;
 
-import com.balancedpayments.errors.HTTPError;
+import java.net.URISyntaxException;
+import java.util.*;
 
 public class ResourcePagination<T> implements Iterable<T> {
     

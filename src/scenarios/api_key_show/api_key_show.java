@@ -8,9 +8,9 @@ import java.util.Map;
 public class api_key_show {
 
 public static void main(String[] args) throws HTTPError, NoResultsFound, MultipleResultsFound {
-Balanced.configure("ak-test-22IOkhevjZlmRP2do6CZixkkDshTiOjTV");
+Balanced.configure("ak-test-aUV295IugdhWSNx2JFckYBCSvfY2ibgq");
 
-ApiKey apiKey = new ApiKey("/api_keys/AK3DgZwSCD2ggxGSw1bsiyDX");
+ApiKey apiKey = new ApiKey("/api_keys/AK7gg5FNb0Owb6hErcMm0CZ7");
 
 }
 }
