@@ -108,8 +108,7 @@ public class Client {
         }
         try {
             return new URI(sb.toString());
-        }
-        catch (URISyntaxException e) {
+        } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
     }
@@ -140,8 +139,7 @@ public class Client {
         HttpResponse response;
         try {
             response = httpClient.execute(request);
-        }
-        catch (ClientProtocolException e) {
+        } catch (ClientProtocolException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -153,20 +151,30 @@ public class Client {
         if (entity != null) {
             try {
                 body = EntityUtils.toString(entity);
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
             if (ContentType.APPLICATION_JSON.getMimeType().equals(entity.getContentType().getValue()))
                 payload = deserialize(body);
+            else
+                payload = deserialize("{\n" +
+                        "  \"status\": \"Internal Server Error\",\n" +
+                        "  \"status_code\": 500,\n" +
+                        "  \"description\": \"Sorry, something has gone wrong. Your request id is OHMb4aa3c52d6e711e3be3f02b12035401b.\",\n" +
+                        "  \"request_id\": \"OHMb4aa3c52d6e711e3be3f02b12035401b\"\n" +
+                        "}");
         }
 
         StatusLine status = response.getStatusLine();
         if (status.getStatusCode() >= 299) {
-            if (payload != null && status.getStatusCode() != 300)
+
+            if (payload != null && status.getStatusCode() != 300) {
+                System.out.printf("if");
                 error(response, body, payload);
-            else
+            } else {
+                System.out.printf("else");
                 throw new HTTPError(response, body);
+            }
         }
 
         return payload;
@@ -180,7 +188,8 @@ public class Client {
 
     private Map<String, Object> deserialize(String body) {
         Gson gson = new Gson();
-        return gson.fromJson(body, new TypeToken<Map<String, Object>>() {}.getType());
+        return gson.fromJson(body, new TypeToken<Map<String, Object>>() {
+        }.getType());
 
     }
 
@@ -188,20 +197,28 @@ public class Client {
             HttpResponse response,
             String body,
             Map<String, Object> payload) throws APIError {
-        Map<String, Object> entity = (Map<String, Object>)((ArrayList)payload.get("errors")).get(0);
-        String category_code = (String) entity.get("category_code");
 
-        // http://stackoverflow.com/questions/3434466/creating-a-factory-method-in-java-that-doesnt-rely-on-if-else
-        if (InsufficientFunds.CODES.contains(category_code))
-            throw new InsufficientFunds(response, body, entity);
-        else if (Declined.CODES.contains(category_code))
-            throw new Declined(response, body, entity);
-        else if (DuplicateAccountEmailAddress.CODES.contains(category_code))
-            throw new DuplicateAccountEmailAddress(response, body, entity);
-        else if (BankAccountVerificationFailure.CODES.contains(category_code))
-            throw new BankAccountVerificationFailure(response, body, entity);
+        if (payload.containsKey("errors")) {
+            Map<String, Object> entity = (Map<String, Object>) ((ArrayList) payload.get("errors")).get(0);
 
-        throw new APIError(response, body, entity);
+            System.out.println(entity);
+            String category_code = (String) entity.get("category_code");
+
+            // http://stackoverflow.com/questions/3434466/creating-a-factory-method-in-java-that-doesnt-rely-on-if-else
+            if (InsufficientFunds.CODES.contains(category_code))
+                throw new InsufficientFunds(response, body, entity);
+            else if (Declined.CODES.contains(category_code))
+                throw new Declined(response, body, entity);
+            else if (DuplicateAccountEmailAddress.CODES.contains(category_code))
+                throw new DuplicateAccountEmailAddress(response, body, entity);
+            else if (BankAccountVerificationFailure.CODES.contains(category_code))
+                throw new BankAccountVerificationFailure(response, body, entity);
+
+            throw new APIError(response, body, entity);
+        } else {
+            System.out.println(payload);
+            throw new APIError(response, body, payload);
+        }
     }
 }
 

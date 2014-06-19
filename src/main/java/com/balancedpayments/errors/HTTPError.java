@@ -8,14 +8,14 @@ public class HTTPError extends Exception {
     public int status_code;
     public String status;
     public String raw;
-    
 
     public HTTPError(HttpResponse response, String raw) {
+
         super(response.getStatusLine().getStatusCode() + " " + response.getStatusLine().getReasonPhrase());
         StatusLine status_line = response.getStatusLine();
         this.status_code = status_line.getStatusCode();
         this.status = status_line.getReasonPhrase();
-        this.raw = raw; 
+        this.raw = raw;
     }
 
 }
